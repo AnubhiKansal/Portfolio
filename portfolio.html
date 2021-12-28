@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.header{
+ background-color: #25274D; 
+ width: 100%;
+ height: 80px;
+ position: fixed;
+ z-index: 9;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ overflow: hidden;
+ position: sticky;
+ top: 0;
+  padding: 5px;
+ width: 100%;	
+}
+
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ margin: 20px;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link{
+    font-size: 2vw;
+    font-weight: 400;
+    color: #FEFFFF; 
+ margin: 20px;
+}
+
+.nav-link:hover{
+    color: teal;
+	background-color: #DEF2F1;
+	padding: 15px;
+}
+
+
+#anubhi{
+ border-radius: 50%;
+ margin: auto;
+ display: flex;
+}
+#bg{
+ background-color: whitesmoke;
+ height: auto;
+ width: cover;
+}
+#info{
+ background-color: #89A4C3;
+ height: 400px;
+ width: 70%;
+ margin: auto;
+ z-index: 9;
+ padding: 40px;
+ text-align: center;
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#project{
+ margin: auto;
+ z-index: 9;
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 80%;
+  height: 600px;
+ font-size: 1.5vw;
+}
+#ppp{
+ display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#con{
+ display: flex;
+  justify-content: center;
+}
+#conn{
+ display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#edu{
+ background-color: #f1faee;
+ margin: auto;
+ z-index: 9;
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 90%;
+  height: 800px;
+}
+#abt{
+text-align: center;
+}
+#footer{
+ background-color: #457B9D;
+ color: white;
+ font-size: 1.5vw;
+ text-align: center;
+ padding: 30px;
+}
+</style>
+
+
+<style>
+.main-container{
+	position: relative;
+	width: 50vw;
+}
+/*creating line for timeline*/
+.main-container::after{
+	content: '';
+	position: absolute;
+	width: 8px;
+	background-color: #A8DADC;
+	top:0;
+	bottom: 0;
+	left: 50%;
+	border-radius: 10px;
+}
+/*Adjusting box of all content*/
+.text-wrapper{
+	padding: 10px 40px;
+	position: relative;
+	width:45vw;
+	box-sizing: border-box;
+	margin: 50px 0;
+}
+.text-wrapper::after{
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: -10px;
+	background-color:#457B9D;
+	top:15px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+/*for right events*/
+.right{
+	left:50%;
+}
+.right::after{
+	left:-10px;
+}
+/*content box colour padding and radius for circular corner*/
+.content{
+	padding: 15px 15px 15px 17px;
+	background-color: #A8DADC;
+	border-radius: 4px;
+}
+/*setting text property of event heading*/
+.content h3{
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #212121;
+	letter-spacing:1px;
+}
+/*setting text property of event content*/
+.content p{
+	color: #616161;
+	font-weight: 300;
+	font-size: 18px;
+	margin-top: 2px;
+	font-family: Times New Roman, Crimson Text;
+}
+
+.pro{
+ 
+  background-color: #8FC1E3;
+ text-align: center;
+ align-items: center;
+ box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  border-radius: 15px;
+  margin: 8px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 265px;
+  transition: 0.7s;
+}
+.pro:hover{
+  background: #46344E;
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 0;
+}
+.icon:hover{
+ font-size: 120px;
+ transform: scale(2.1);
+  
+}
+</style>
+
+</head>
+
+<body>
+<div id="bg">
+<header class="header">
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#abt" class="nav-link">About</a>
+                </li>
+	 	<li class="nav-item">
+                    <a href="#edu" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skill" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+        </nav>
+</header><br/><br/><br/><br/><br/><br/>
+<br/><div id="info">
+<div style="background-color: white; border-radius: 50%; width: 200px; height: 200px; margin: auto; text-align: center; padding: 8px;"><img src="F:\PORTFOLIO\anubhi.jpeg" alt="not found" height="" width="200" id="anubhi"></div>
+<span style="font-family:Times New Roman; color: #00313D; font-size: 4vw; display: inline-block; vertical-align: middle; line-height: normal;">Anubhi Kansal</span><br/>
+<span style="font-family:Copperplate; color: #00313D; font-size: 25px; display: inline-block; vertical-align: middle; line-height: normal;">Intern at DRDO Chandigarh</span><br/><br/>
+<span style="font-family:Times New Roman; color: #00313D; font-size: 1vw; display: inline-block; vertical-align: middle; line-height: normal;">
+<a href="https://www.linkedin.com/in/anubhi-kansal-6847801b0/"><img src="F:\PORTFOLIO\li.png" alt="not found" height="40px" width="40px" style="margin:10px;"></a>
+<a href=""><img src="F:\PORTFOLIO\github.png" alt="not found" height="40px" width="40px" style="margin:10px;"></a><br>
+
+
+</div>
+<br><br><br>
+<div id="abt" height="500px"><br><br/><br/>
+<div style="text-align: center; padding: 10px; margin: 20px;">
+<span style="font-family:Times New Roman; color: #00313D; font-size: 4vw; margin: auto; display: inline-block; vertical-align: middle;
+ text-align: center; text-shadow: teal 1px 0 5px; letter-spacing: 2px;"><br>About Me</span><br/><hr height="5px" width="80%"><br>
+<span style="font-family:Copperplate; color: #00313D; text-align:center; font-size: 25px; display: inline-block; vertical-align: middle; line-height: normal;">
+Hi, Welcome to my Portfolio:)<br><br>I am a Front-End Developer.</span><br/><br/>
+<span style="font-family:Copperplate; color: #00313D; text-align:center; font-size: 2vw; padding: 20px; display: inline-block; vertical-align: middle; line-height: normal;">
+I am a learner with passion for the latest developments in technology, and willing to take new challenges.<br/>Team player with decent communication skills.<br/><br/>
+I aim to be associated with a growing organization that provides me with the scope to enhance my skills as per the latest trends and to become a team that progressively work towards the growth of the organization.</span><br/>
+</div></div><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div id="edu">
+
+<br/><br/><br><br/><br/><br><div style="text-align: center;">
+<span style="font-family:Times New Roman; color: #00313D; font-size: 4vw; margin: auto; display: inline-block; vertical-align: middle;
+ text-align: center;"><div class="wrapper">
+  <span>E</span>
+  <span>D</span>
+  <span>U</span>
+  <span>C</span>
+  <span>A</span>
+  <span>T</span>
+  <span>I</span>
+  <span>O</span><span>N</span>
+</div></span><br/></div>
+<br/><br/><br>
+<div class="main-container"  >
+         <div class="text-wrapper right">
+            <div class="content">
+                <span><h2 style="display: inline-block;">BTech in Computer Science</h2></span><span style="display: inline-block; float:right; margin:20px;"><h3>2018-2022</h3></span>
+                <p style="font-family: Crimson Text; font-size:20px; letter-spacing:1px;">Banasthali Vidyapith, Rajasthan</p>
+		<p>8.7 cgpa</p>
+		
+            </div>
+        </div>
+ <div class="text-wrapper right" >
+            <div class="content">
+                <h2 style="display: inline-block;">Intermediate (12th)</h2></span><span style="display: inline-block; float:right; margin:20px;"><h3>2018</h3></span>
+                <p style="font-family: Crimson Text; font-size:20px; letter-spacing:1px;">Dewan Public School, Meerut, Uttar Pradesh</p>
+		<p>90.2%</p>
+            </div>
+        </div>
+        <!-- <div class="text-wrapper right">
+            <div class="content">
+                
+                <h2 style="display: inline-block;">High School (10th)</h2><span style="display: inline-block; float:right; margin:20px;"><h3>2016</h3></span>
+                <p style="font-family: Crimson Text; font-size:20px; letter-spacing:1px;">Dewan Public School, Meerut, Uttar Pradesh</p>
+		<p>10 cgpa</p>
+            </div>
+        </div> --> </div>
+</div><br/><br/><br/><br/><br/><br/>
+
+<div id="skill">
+<div style="text-align: center;">
+<div style="text-align: center; align-items: center;">
+<span style="font-family:Times New Roman; color: #00313D; font-size: 4vw; margin: auto; display: inline-block; vertical-align: middle;
+ text-align: center; text-shadow: teal 1px 0 5px; letter-spacing: 2px;"><br><br>SKILLS</span><hr style="width: 150px; height: 1px; color: black; background-color: grey;"><br></div>
+<div style="display: flex; justify-content: center;">
+<div class="con" style="font-size: 50px; color: teal; padding: 20px;">
+<i class="fa fa-code" style="font-size: 3vw; color: teal;"></i> 
+<span style="font-family:Copperplate; color: #00313D; text-align:center; display: inline-block; font-size: 1.1vw;">
+Programming Language: C, C++, Python<br/><br></span><br/></div>
+<div class="con" style="font-size: 50px; color: teal; padding: 20px;">
+<i class="fa fa-code" style="font-size: 3vw; color: teal;"></i><i class="fas fa-laptop-code" ></i> 
+<span style="font-family:Copperplate; color: #00313D; text-align:center; display: inline-block; font-size: 1.1vw;">
+Data Structures and Algorithms<br><br></span><br/></div>
+</div>
+
+<div style="display: flex; justify-content: center;">
+<div class="con" style="font-size: 50px; color: teal; padding: 30px;">
+<i class="fa fa-laptop" style="font-size: 3vw; color: teal;"></i><i class="fas fa-laptop-code" ></i> 
+<span style="font-family:Copperplate; color: #00313D; text-align:center; display: inline-block; font-size: 1.1vw;">
+Front-End Developement: HTML5, CSS3, Javascript, Jquery<br><br></span><br/></div>
+
+<div class="con" style="font-size: 50px; color: teal; padding: 30px;">
+<i class="fa fa-database" style="font-size: 3vw; color: teal;"></i><i class="fas fa-laptop-code" ></i> 
+<span style="font-family:Copperplate; color: #00313D; text-align:center; display: inline-block; font-size: 1.1vw;">
+Back-End Developement: MySQL<br><br></span><br/></div>
+</div>
+
+<div style="display: flex; justify-content: center;">
+<div class="con" style="font-size: 50px; color: teal; padding: 30px;">
+<i class="fa fa-database" style="font-size: 3vw; color: teal;"></i><i class="fas fa-laptop-code" ></i> 
+<span style="font-family:Copperplate; color: #00313D; text-align:center; display: inline-block; font-size: 1.1vw;">
+Database management Systems<br><br></span><br/></div>
+
+<div class="con" style="font-size: 50px; color: teal; padding: 30px;">
+<i class="fa fa-laptop" style="font-size: 3vw; color: teal;"></i><i class="fas fa-laptop-code" ></i> 
+<span style="font-family:Copperplate; color: #00313D; text-align:center; display: inline-block; font-size: 1.1vw;">
+Object Oriented Concepts<br><br></span><br/></div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div id="projects"><br/><br/><br/>
+<div id="project">
+<br><br/><br/><br><div style="text-align: center; align-items: center;">
+<span style="font-family:Times New Roman; color: #00313D; font-size: 4vw; margin: auto; display: inline-block; vertical-align: middle;
+ text-align: center;">PROJECTS</span><br/><hr style="width: 150px; height: 1px; color: black; background-color: grey;"><br></div>
+
+<div id="ppp">
+<div style="width: 20vw; margin: 30px;" class="pro">
+<h2 style="font-size: 2vw;">Portfolio</h2>
+<p>HTML & CSS<p>
+<a href=""><img src="F:\PORTFOLIO\github.png" alt="not found" height="40px" width="40px" style="margin:10px;"></a>
+
+</div>&nbsp;
+<div style="width: 20vw; display: inline-block; margin: 30px;" class="pro">
+<h2 style="font-size: 2vw;">Resume Builder Website</h2>
+<p>HTML | CSS | Bootstrap | Javascript<br/> Java | Derby Database<p>
+<a href=""><img src="F:\PORTFOLIO\github.png" alt="not found" height="40px" width="40px" style="margin:10px;"></a>
+</div>
+
+<div style="width: 20vw; display: inline-block; margin: 30px;" class="pro">
+<h2 style="font-size: 2vw;">Route Optimization</h2>
+<p>Python & Django<p>
+<a href=""><img src="F:\PORTFOLIO\github.png" alt="not found" height="40px" width="40px" style="margin:10px;"></a>
+
+</div>&nbsp;
+</div></div>
+<br><br/><br/><br>
+<div id="contact">
+<div style="text-align: center;">
+<div style="text-align: center; align-items: center;">
+<span style="font-family:Times New Roman; color: #00313D; font-size: 4vw; margin: auto; display: inline-block; vertical-align: middle;
+ text-align: center; text-shadow: teal 1px 0 5px; letter-spacing: 2px;"><br><br>GET IN TOUCH</span><hr style="width: 150px; height: 1px; color: black; background-color: grey;"><br></div>
+<div style="text-align: center;"><span style="font-family:Copperplate; color: #00313D; text-align:center; font-size: 2vw; margin: 20px; display: inline-block; vertical-align: middle; line-height: normal;">
+On the off chance that you might want to connect with me, be it for investigating innovation, business, or to simply say hello, don't hesitate to send a mail or call.</span><br/><br/>
+</div>
+<div class="con" style="font-size: 50px; color: teal;">
+<i class="fa fa-map-marker icon" style="font-size: 4vw;; color: teal; padding: 20px;"></i> 
+<span style="font-family:Copperplate; color: #00313D; text-align:center; font-size: 2vw;;">
+HNo: 80 Sector: 4 Jagriti Vihar Meerut, Uttar Pradesh</span><br/></div>
+<div class="con" style="font-size: 50px; color: teal;">
+<i class="fa fa-envelope icon" aria-hidden="true" style="font-size: 4vw; padding: 20px; color: teal;"></i> 
+<span style="font-family:Copperplate; color: #00313D; display: inline-block; text-align:center; font-size: 2vw; justify-content: center;">
+anXXXXXXXX</span></div>
+<div class="con" style="font-size: 50px; color: teal;">
+<i class="fa fa-phone icon" aria-hidden="true" style="font-size: 4vw; padding: 20px; color: teal;"></i>
+<span style="font-family:Copperplate; color: #00313D; font-size: 2vw;">
+90xxxxxxx0</span>
+</div>
+<!-- <div id="conn">
+<br/>
+
+</div> -->
+</div>
+</div>
+<br/><br/><br/>
+<div id="footer" height="50px">© No Copyrights, feel free to use this template.</div>
+</body>
+
+
+</html>
